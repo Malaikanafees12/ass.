@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare Furniture</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous">
+   </script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+     crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+     body {
+    background-color: rgb(206, 203, 203);
+    /* background-image: linear-gradient(to right, rgb(92, 78, 78), rgb(39, 37, 37)); */
+  }
+  /* navigation styling start */
+  .navbar .navbar-nav .nav-item a {
+    padding: 10px;
+    margin: 10px;
+    font-size: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+
+  }
+
+
+  .navbar .nav-icon .icon {
+    padding: 10px;
+    margin: 5px;
+    font-size: 18px;
+    /* font-size: larger; */
+    color: white;
+  }
+
+  .container-fluid {
+    background-color: black;
+    font-family: Argent CF;
+
+  }
+
+  .navbar-brand {
+    font-size: 30px;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .nav-link:hover {
+    text-decoration: underline;
+
+  }
+
+/* navigation end */
+/* compare styling */
+    td>img{
+        width: 100%;
+        height: 250px;
+        object-fit: contain;
+    }
+    h1{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 15px;
+    }
+    /* compare end */
+    /* footer styling */
+    #footerbg {
+    background-color: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding:10px;
+   
+   
+  }
+  
+
+  .link-secondary {
+    text-decoration: overline;
+    font-size: 25px;
+    color: white;
+  }
+  /* footer end  */
+
+
+</style>
+</head>
+<body>
+     <!-- strat of navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="logo2.jpg" alt="logo" style="height: 50px; width: 85px;">Durable
+        Furnitures</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index2.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="about.html">About Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link active dropdown-toggle" href="#" id="navbarDropdown" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              Furnitures By Category
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="BD.html">Bed Room</a></li>
+              <li><a class="dropdown-item" href="living.html">Living Room</a></li>
+              <li><a class="dropdown-item" href="kid.html">Kids Room</a></li>
+              <li><a class="dropdown-item" href="dining.html">Dining Room</a></li>
+              <li><a class="dropdown-item" href="office.html">Office Furnitures</a></li>
+              <li>
+              </li>
+            </ul>
+            <li class="nav-item">
+              <a class="nav-link active" href="compare.html">Products Comparision</a>
+            </li>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active " href="isotop.html" tabindex="-1" aria-disabled="true">Top Items Gallery</a>
+          </li>
+        </ul>
+      
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-icon">
+            <a class="icon" href="contact us.html"><i class="fa-solid fa-user"></i></a>
+          </li>
+          <li class="nav-icon">
+            <a class="icon" href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- end of nav// -->
+
+
+    <h1 class="display-5 my-5 text-center">PRODUCT COMPARE</h1>
+    <div class="container">
+        <div class="col-md-9 mx-auto">
+            <table class="table">
+                <tr class="bg-secondary">
+                    <th>Select Product</th>
+                    <th width="300px">
+                        <select class="form-control" id="select1" onchange="item1(this.value)">
+                            <option value="0">-- Select  --</option>
+                        </select>
+                    </th>
+                    <th width="300px">
+                        <select class="form-control" id="select2" onchange="item2(this.value)">
+                            <option value="0">-- Select  --</option>
+                        </select>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Product Image</th>
+                    <td>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png" id="img1" alt=" ">
+                    </td>
+                    <td>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1665px-No-Image-Placeholder.svg.png" id="img2" alt=" ">
+                    </td>
+                </tr>
+                <tr>
+                    <th>Product Price</th>
+                    <td id="price1">N/A</td>
+                    <td id="price2">N/A</td>
+                </tr>
+                <tr>
+                    <th>Product Description</th>
+                    <td id="desc1">N/A</td>
+                    <td id="desc2">N/A</td>
+                </tr>
+                <tr>
+                    <th>Product Brand</th>
+                    <td id="brand1">N/A</td>
+                    <td id="brand2">N/A</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+    
+</body>
+<!-- start footer -->
+<br> <br>
+<footer class="text-center text-lg-start " id="footerbg">
+  <div class="me-5 d-none d-lg-block">
+
+  </div>
+  
+
+  <!-- Section -->
+
+  <!-- Section: Links  -->
+  <section class="links">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+         Furnitures Concepts
+          </h6>
+          <p>
+            Furniture Concepts is a contract furniture wholesaler serving the needs of group living environments
+            including Community Housing, Treatment & Recovery Centers, Assisted Living, Camps, Conference Centers,
+            Student Housing, Military Dorms & Quarters, and more!
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Resources
+          </h6>
+          <p>
+            <a href="#" class="text-reset">Assembly Instructions</a>
+          </p>
+
+          <p>
+            <a href="#" class="text-reset">Buying Programs Partners</a>
+          </p>
+
+          <p>
+            <a href="#" class="text-reset">Guides</a>
+          </p>
+
+          <p>
+            <a href="#" class="text-reset">Catalogs</a>
+          </p>
+          <p>
+            <a href="#" class="text-reset">Laminates & Finishes</a>
+          </p>
+        </div>
+
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="living.html" class="text-reset">Living</a>
+          </p>
+          <p>
+            <a href="#" class="text-reset">About Us</a>
+          </p>
+          <p>
+            <a href="furnituresbycatagorary" class="text-reset">Furnitures by catagories</a>
+          </p>
+          <p>
+            <a href="kid.html" class="text-reset">Kids Room</a>
+          </p>
+
+          <p>
+            <a href="contact.html" class="text-reset">Contact Us</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3 text-secondary"></i> Dubai, UAE 10012, US</p>
+          <p>
+            <i class="fas fa-envelope me-3 text-secondary"></i>
+            office@Durablefurniture.com
+          </p>
+          <p><i class="fas fa-phone me-3 text-secondary"></i> 03180115584</p>
+          <p><i class="fas fa-print me-3 text-secondary"></i> 03168905467</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+  <div class="text-center p-4">
+  </div>
+
+  <div class="me-5 d-none d-lg-block">
+
+  </div>
+  <div>
+    <center>
+    <a href="" class="me-4 link-secondary">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="" class="me-4 link-secondary">
+      <i class="fab fa-twitter"></i>
+    </a>
+    <a href="" class="me-4 link-secondary">
+      <i class="fab fa-google"></i>
+    </a>
+    <a href="" class="me-4 link-secondary">
+      <i class="fab fa-instagram"></i>
+    </a>
+
+  </div>
+</center>
+
+</footer>
+<!-- Footer end -->
+
+</html>
+<script src="java.js"></script>
+<script>
+for (var i = 1; i < product.length; i++) {
+    document.getElementById("select1").innerHTML += `
+    <option value="${i}">${product[i].title}</option>
+    `;
+    document.getElementById("select2").innerHTML += `
+    <option value="${i}">${product[i].title}</option>
+    `;
+}
+
+function item1(a) {
+    var select2 = document.getElementById("select2").value;
+    if (a != select2) {
+        document.getElementById("img1").src = product[a].image
+        document.getElementById("price1").innerHTML = "PKR " + product[a].price
+        document.getElementById("desc1").innerHTML = product[a].description
+        document.getElementById("brand1").innerHTML = product[a].brand
+
+    } else {
+        document.getElementById("select1").selectedIndex = 0;
+        document.getElementById("img1").src = product[0].image
+        document.getElementById("price1").innerHTML = ""
+        document.getElementById("desc1").innerHTML = ""
+        document.getElementById("brand1").innerHTML = ""
+
+    }
+}
+
+function item2(a) {
+    var select1 = document.getElementById("select1").value;
+    if (a != select1) {
+        document.getElementById("img2").src = product[a].image
+        document.getElementById("price2").innerHTML = "PKR " + product[a].price
+        document.getElementById("desc2").innerHTML = product[a].description
+        document.getElementById("brand2").innerHTML = product[a].brand
+    } else {
+        document.getElementById("select2").selectedIndex = 0;
+        document.getElementById("img2").src = product[0].image
+        document.getElementById("price2").innerHTML = ""
+        document.getElementById("desc2").innerHTML = ''
+        document.getElementById("brand2").innerHTML = ""
+
+    }
+}
+    </script>
